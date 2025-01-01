@@ -63,21 +63,36 @@ h2 {
     height: 100vh;
     background-color: black;
   }
+  /* Container styling */
   #sideNav .navbar-brand {
-    display: flex;
-    margin: auto auto 0;
-    padding: 0.5rem; 
-    justify-content: center;
-    align-items: center;
-  }
-  #sideNav .navbar-brand .img-profile {
-    width: 10rem; /* Ensure equal width */
-    height: 10rem; /* Ensure equal height */
-    border: 0.5rem solid rgba(255, 255, 255, 0.2); /* Optional border */
-    object-fit: cover; /* Maintain the aspect ratio and crop overflow */
-    border-radius: 50%; /* Make the shape circular */
-    display: block; /* Prevent inline spacing issues */
-  }
+  display: flex;
+  margin: auto auto 0;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#sideNav .navbar-brand .img-profile {
+  width: 200px;  /* Fixed width */
+  height: 200px; /* Fixed height - same as width for perfect circle */
+  object-fit: cover; /* Makes the image fill the fixed space */
+  border: 0.5rem solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+/* Add this to ensure the image wrapper is also properly sized */
+.rounded-circle {
+  aspect-ratio: 1 / 1;
+  display: block;
+}
+
+/* Additional specificity to override any conflicting styles */
+.img-fluid.img-profile.rounded-circle {
+  max-width: 16rem !important;
+  max-height: 16rem !important;
+  min-width: 16rem !important;
+  min-height: 16rem !important;
+}
   #sideNav .navbar-collapse {
     display: flex;
     align-items: flex-start;
@@ -96,7 +111,9 @@ h2 {
     display: block;
   } 
 }
-
+.justify {
+  text-align: justify;
+}
 section.resume-section {
   border-bottom: 1px solid #dee2e6;
   padding-top: 5rem !important;
