@@ -35,8 +35,7 @@ h2 {
   font-family: 'Saira Extra Condensed', serif;
   font-size: 1.35rem; }
 
-.list-social-icons a {
-  color: #495057; }
+
   .list-social-icons a:hover {
     color: black; }
   .list-social-icons a .fa-lg {
@@ -132,30 +131,73 @@ section.resume-section {
   margin-bottom: 1rem;
 }
 
-.list-icons i {
-  font-size: 3rem;
+.list-inline-item i,
+.list-inline-item svg {
+    font-size: 3rem;
+    transition: transform 0.2s;
 }
 
-.fa-ul li i {
+/* .fa-ul li i {
   color: #BD5D38;
-}
+} */
 
 /* New styles for portfolio link */
 .portfolio-link {
-  text-decoration: none;
+  text-decoration: none !important;
   color: inherit;
   transition: color 0.3s ease;
 }
 
+/* .devicons-html5 {
+  color: #E34F26 !important;
+} */
+.fa-palette {
+  color: #ff7f50 !important;  
+}
+
+.devicons-css3 {
+  color: #1572B6 !important;
+}
+
+.devicons-python {
+  color: #3776AB !important;
+}
+
+.devicons-photoshop {
+  color: #31A8FF !important;
+}
+
+.fa-pen-fancy {
+  color: #FF61F6 !important;  /* Adobe Express pink */
+}
+
+.fa-bezier-curve {
+  color: #00C4CC !important;  /* Canva blue */
+}
+
+.list-inline-item:hover i,
+.list-inline-item:hover svg {
+    color: #BD5D38 !important;
+    transform: scale(1.1);
+}
+
+/* Remove brown hover color */
 .portfolio-link:hover {
-  color: #BD5D38;  /* Or your theme color */
+    color: inherit;
 }
 
-.portfolio-link:hover .tech-label {
-  color: #BD5D38;  /* Or your theme color */
+.tech-label {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #666;
 }
 
-
+/* SVG icon sizing */
+.adobe-express-icon,
+.canva-icon {
+    width: 48px;
+    height: 48px;
+}
 
 
 @media (min-width: 768px) {
